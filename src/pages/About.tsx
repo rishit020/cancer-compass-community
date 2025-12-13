@@ -6,14 +6,12 @@ import {
   Users,
   Lightbulb,
   Calendar,
-  Gift,
   Globe,
   Target,
   TrendingUp,
   Handshake,
   Megaphone,
   Package,
-  ArrowRight,
 } from "lucide-react";
 
 const purposes = [
@@ -200,29 +198,24 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-secondary text-secondary-foreground">
+      <section className="section-padding bg-card border-y border-border">
         <div className="container-narrow mx-auto px-4 md:px-8 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             Join Us in Making a Difference
           </h2>
-          <p className="text-secondary-foreground/70 mb-8 max-w-xl mx-auto">
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
             Whether through donations, volunteering, or simply spreading the word, you can help us support families affected by cancer.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/donate">
-              <Button variant="gold" size="lg" className="group">
-                <Heart className="w-5 h-5" />
+              <Button variant="gold" size="xl">
+                <Heart />
                 Make a Donation
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
             <Link to="/volunteer">
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
-              >
-                <Users className="w-5 h-5" />
+              <Button variant="gold-outline" size="xl">
+                <Users />
                 Become a Volunteer
               </Button>
             </Link>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Heart, Users, ArrowRight } from "lucide-react";
+import { Heart, Users } from "lucide-react";
 
 const CTASection = () => {
   return (
@@ -24,16 +24,15 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/donate">
-              <Button variant="gold" size="xl" className="group">
-                <Heart className="w-5 h-5" />
-                Donate Today
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <Button variant="gold" size="xl">
+                <Heart />
+                Donate Now
               </Button>
             </Link>
             <Link to="/volunteer">
-              <Button variant="outline" size="xl">
-                <Users className="w-5 h-5" />
-                Volunteer With Us
+              <Button variant="gold-outline" size="xl">
+                <Users />
+                Become a Volunteer
               </Button>
             </Link>
           </div>

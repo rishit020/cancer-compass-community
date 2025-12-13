@@ -49,7 +49,7 @@ const Navbar = () => {
             ))}
             <Link to="/donate" className="ml-2">
               <Button variant="gold" size="sm">
-                <Heart className="w-4 h-4" />
+                <Heart />
                 Donate
               </Button>
             </Link>

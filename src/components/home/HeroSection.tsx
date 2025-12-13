@@ -35,19 +35,19 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-delay-2">
             <Link to="/donate">
               <Button variant="gold" size="xl">
-                <Heart className="w-5 h-5" />
+                <Heart />
                 Donate Now
               </Button>
             </Link>
             <Link to="/volunteer">
-              <Button variant="outline" size="xl">
-                <Users className="w-5 h-5" />
+              <Button variant="gold-outline" size="xl">
+                <Users />
                 Become a Volunteer
               </Button>
             </Link>
             <Link to="/about">
               <Button variant="ghost" size="xl">
-                <Calendar className="w-5 h-5" />
+                <Calendar />
                 Learn More
               </Button>
             </Link>
