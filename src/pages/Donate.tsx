@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Heart, DollarSign, Gift, Users, Shield, ArrowRight, ExternalLink } from "lucide-react";
+import { Heart, DollarSign, Gift, Users, Shield, ArrowRight } from "lucide-react";
 
 const impactItems = [
   {
@@ -109,12 +109,11 @@ const Donate = () => {
               <Button
                 variant="gold"
                 size="xl"
-                className="group mb-4"
+                className="mb-4"
                 onClick={handlePayPalClick}
               >
-                <Heart className="w-5 h-5" />
+                <Heart />
                 Donate via PayPal
-                <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Button>
 
               <p className="text-sm text-muted-foreground">
@@ -187,15 +186,15 @@ const Donate = () => {
             Can't donate right now? There are other meaningful ways you can help our cause.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="gold-outline" size="xl" asChild>
               <a href="/volunteer">
-                <Users className="w-5 h-5" />
+                <Users />
                 Volunteer Your Time
               </a>
             </Button>
-            <Button variant="ghost" size="lg" asChild>
+            <Button variant="ghost" size="xl" asChild>
               <a href="/contact">
-                <Heart className="w-5 h-5" />
+                <Heart />
                 Spread the Word
               </a>
             </Button>
