@@ -30,7 +30,7 @@ const CTASection = () => {
               </Button>
             </Link>
             <Link to="/volunteer">
-              <Button variant="gold-outline" size="xl">
+              <Button variant="gold" size="xl">
                 <Users />
                 Become a Volunteer
               </Button>

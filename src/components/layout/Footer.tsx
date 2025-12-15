@@ -19,7 +19,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-secondary-foreground/70 text-sm leading-relaxed">
-              A student-run nonprofit dedicated to supporting cancer patients and their families through fundraising, volunteering, and community outreach.
+              A student-led nonprofit guiding, supporting, and uplifting people affected by cancer by raising funds, spreading awareness, and building a strong volunteer community.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm"
+                    className="text-secondary-foreground/70 hover:text-secondary-foreground transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -57,7 +57,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm"
+                    className="text-secondary-foreground/70 hover:text-secondary-foreground transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -70,8 +70,8 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg font-semibold mb-4 text-secondary-foreground">Contact</h4>
             <div className="flex items-center gap-2 text-secondary-foreground/70 mb-4">
-              <Mail className="w-4 h-4" />
-              <a href="mailto:contact@cancercompass.org" className="text-sm hover:text-primary transition-colors">
+              <Mail className="w-4 h-4 hover:text-secondary-foreground transition-colors" />
+              <a href="mailto:contact@cancercompass.org" className="text-sm hover:text-secondary-foreground transition-colors">
                 contact@cancercompass.org
               </a>
             </div>
@@ -86,9 +86,9 @@ const Footer = () => {
                   key={social.label}
                   href="#"
                   aria-label={social.label}
-                  className="w-9 h-9 rounded-full bg-secondary-foreground/10 flex items-center justify-center text-secondary-foreground/70 hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+                  className="w-9 h-9 rounded-full bg-secondary-foreground/10 flex items-center justify-center text-secondary-foreground/70 hover:bg-primary hover:text-primary-foreground transition-all duration-200 group"
                 >
-                  <social.icon className="w-4 h-4" />
+                  <social.icon className="w-4 h-4 group-hover:text-primary-foreground transition-colors" />
                 </a>
               ))}
             </div>

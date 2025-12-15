@@ -1,22 +1,27 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
+import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 
 const categories = ["All", "Events", "Volunteers", "Outreach", "Fundraisers", "Care Packages"];
 
 const galleryImages = [
-  { id: 1, src: "/placeholder.svg", alt: "Community event", category: "Events" },
-  { id: 2, src: "/placeholder.svg", alt: "Volunteers helping", category: "Volunteers" },
-  { id: 3, src: "/placeholder.svg", alt: "Outreach program", category: "Outreach" },
-  { id: 4, src: "/placeholder.svg", alt: "Fundraising gala", category: "Fundraisers" },
-  { id: 5, src: "/placeholder.svg", alt: "Care package assembly", category: "Care Packages" },
-  { id: 6, src: "/placeholder.svg", alt: "Awareness walk", category: "Events" },
-  { id: 7, src: "/placeholder.svg", alt: "Team meeting", category: "Volunteers" },
-  { id: 8, src: "/placeholder.svg", alt: "School presentation", category: "Outreach" },
-  { id: 9, src: "/placeholder.svg", alt: "Bake sale", category: "Fundraisers" },
-  { id: 10, src: "/placeholder.svg", alt: "Delivering packages", category: "Care Packages" },
-  { id: 11, src: "/placeholder.svg", alt: "Community gathering", category: "Events" },
-  { id: 12, src: "/placeholder.svg", alt: "Volunteer training", category: "Volunteers" },
+  { id: 1, src: "/images/community-gathering-group.jpg", alt: "Community Gathering with Volunteers", category: "Events" },
+  { id: 2, src: "/images/founders-group-photo.jpg", alt: "Cancer Compass Founders Group Photo", category: "Volunteers" },
+  { id: 3, src: "/images/fundraising-table.jpg", alt: "Fundraising Event Table Setup", category: "Fundraisers" },
+  { id: 4, src: "/images/gallery_1.JPG", alt: "Cancer Compass Community Event in Action", category: "Events" },
+  { id: 5, src: "/images/gallery_2.JPG", alt: "Community Gathering and Outreach Event", category: "Outreach" },
+  { id: 6, src: "/images/gallery_3.JPG", alt: "Volunteers and Community Members Gathering", category: "Volunteers" },
+  { id: 7, src: "/images/gallery_4.JPG", alt: "Fundraising Event Celebration in Action", category: "Fundraisers" },
+  { id: 8, src: "/images/gallery_5.JPG", alt: "Community Event and Gathering in Action", category: "Events" },
+  { id: 9, src: "/images/gallery_6.JPG", alt: "Volunteer Activities and Outreach in Action", category: "Outreach" },
+  { id: 10, src: "/images/gallery_7.JPG", alt: "Care Package Distribution Event in Action", category: "Care Packages" },
+  { id: 11, src: "/images/pickleball-event-action.jpg", alt: "Fundraising Pickle Ball Tournament in Action", category: "Fundraisers" },
+  { id: 12, src: "/images/pickleball-fundraiser-group.jpg", alt: "Fundraising Pickle Ball Event with Volunteers", category: "Fundraisers" },
+  { id: 13, src: "/images/volunteers-group-photo.jpg", alt: "Group of Cancer Compass Volunteers", category: "Volunteers" },
+  { id: 14, src: "/images/gallery_8.JPG", alt: "Cancer Compass Community Event in Action", category: "Events" },
+  { id: 15, src: "/images/gallery_9.JPG", alt: "Community Outreach and Engagement Event", category: "Outreach" },
+  { id: 16, src: "/images/gallery_10.JPG", alt: "Volunteer Activities and Community Support", category: "Volunteers" },
 ];
 
 const Gallery = () => {
@@ -53,17 +58,15 @@ const Gallery = () => {
           {/* Category Filter */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
             {categories.map((category) => (
-              <button
+              <Button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  activeCategory === category
-                    ? "bg-primary text-primary-foreground shadow-lg"
-                    : "bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground"
-                }`}
+                variant="gold"
+                size="default"
+                className={activeCategory === category ? "shadow-xl scale-105" : "opacity-75 hover:opacity-100"}
               >
                 {category}
-              </button>
+              </Button>
             ))}
           </div>
 
@@ -79,7 +82,12 @@ const Gallery = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 image-fade-in"
+                  loading="lazy"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "/placeholder.svg";
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -100,12 +108,14 @@ const Gallery = () => {
           className="fixed inset-0 z-50 bg-secondary/95 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <button
-            className="absolute top-4 right-4 w-12 h-12 rounded-full bg-secondary-foreground/10 flex items-center justify-center text-secondary-foreground hover:bg-secondary-foreground/20 transition-colors"
+          <Button
+            variant="gold"
+            size="icon"
+            className="absolute top-4 right-4 rounded-full"
             onClick={() => setSelectedImage(null)}
           >
             <X className="w-6 h-6" />
-          </button>
+          </Button>
           <div
             className="max-w-4xl w-full"
             onClick={(e) => e.stopPropagation()}
@@ -114,6 +124,10 @@ const Gallery = () => {
               src={selectedImage.src}
               alt={selectedImage.alt}
               className="w-full h-auto max-h-[80vh] object-contain rounded-xl"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = "/placeholder.svg";
+              }}
             />
             <div className="mt-4 text-center">
               <span className="inline-block bg-primary text-primary-foreground text-sm font-medium px-4 py-1 rounded-full mb-2">

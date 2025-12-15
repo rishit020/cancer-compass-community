@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Heart, DollarSign, Gift, Users, Shield, ArrowRight } from "lucide-react";
+import { Heart, DollarSign, Gift, Users, Shield, CheckCircle2, TrendingUp, Eye, Users2 } from "lucide-react";
 
 const impactItems = [
   {
@@ -26,10 +26,22 @@ const impactItems = [
 ];
 
 const trustItems = [
-  "100% of donations go directly to supporting cancer patients and families",
-  "Regular updates on how your donation is making an impact",
-  "Student-led with adult supervision and transparent finances",
-  "Part of a growing network of community supporters",
+  {
+    icon: CheckCircle2,
+    text: "100% of donations go directly to supporting cancer patients and families",
+  },
+  {
+    icon: TrendingUp,
+    text: "Regular updates on how your donation is making an impact",
+  },
+  {
+    icon: Eye,
+    text: "Student-led with adult supervision and transparent finances",
+  },
+  {
+    icon: Users2,
+    text: "Part of a growing network of community supporters",
+  },
 ];
 
 const Donate = () => {
@@ -133,10 +145,12 @@ const Donate = () => {
                 >
                   paypal.me/cancercompass
                 </a>
-                <div className="mt-4 w-32 h-32 mx-auto bg-background rounded-lg flex items-center justify-center border border-border">
-                  <span className="text-muted-foreground text-xs text-center px-2">
-                    PayPal QR Code Placeholder
-                  </span>
+                <div className="mt-4 w-32 h-32 mx-auto bg-background rounded-lg flex items-center justify-center border border-border p-2">
+                  <img
+                    src="/images/paypal-qr-code.png"
+                    alt="PayPal QR Code"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
             </div>
@@ -145,30 +159,45 @@ const Donate = () => {
       </section>
 
       {/* Trust Section */}
-      <section className="section-padding bg-secondary text-secondary-foreground">
-        <div className="container-wide mx-auto px-4 md:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-10">
-              <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
+      <section className="section-padding bg-gradient-section relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-30 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
+        </div>
+
+        <div className="container-wide mx-auto px-4 md:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-primary" />
+              </div>
+              <span className="inline-block text-primary font-medium text-sm tracking-wider uppercase mb-3">
+                Transparency & Trust
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Your Trust Matters
               </h2>
-              <p className="text-secondary-foreground/70">
+              <p className="text-muted-foreground max-w-2xl mx-auto">
                 We're committed to transparency and ensuring your donation makes the biggest
                 impact possible.
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {trustItems.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-4 bg-secondary-foreground/5 p-4 rounded-xl"
+                  className="group bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border card-hover"
                 >
-                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <ArrowRight className="w-4 h-4 text-primary" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-300 group-hover:scale-110">
+                      <item.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                    </div>
+                    <p className="text-foreground font-medium leading-relaxed pt-1">
+                      {item.text}
+                    </p>
                   </div>
-                  <p className="text-secondary-foreground">{item}</p>
                 </div>
               ))}
             </div>
@@ -186,13 +215,13 @@ const Donate = () => {
             Can't donate right now? There are other meaningful ways you can help our cause.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="gold-outline" size="xl" asChild>
+            <Button variant="gold" size="xl" asChild>
               <a href="/volunteer">
                 <Users />
                 Volunteer Your Time
               </a>
             </Button>
-            <Button variant="ghost" size="xl" asChild>
+            <Button variant="gold" size="xl" asChild>
               <a href="/contact">
                 <Heart />
                 Spread the Word

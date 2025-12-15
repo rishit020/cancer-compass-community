@@ -41,7 +41,7 @@ const MissionSection = () => {
             Guiding, Supporting & Uplifting
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            We exist to ensure no family faces the journey through cancer alone. Our mission is built on four key pillars.
+            Cancer Compass is a student-led nonprofit founded by Rushil R, Vrishab P, and Krish D. We started this organization because we believe no family should face cancer alone. Our mission is to guide, support, and uplift people affected by cancer by raising funds, spreading awareness, and building a strong volunteer community.
           </p>
         </div>
 

@@ -40,13 +40,13 @@ const HeroSection = () => {
               </Button>
             </Link>
             <Link to="/volunteer">
-              <Button variant="gold-outline" size="xl">
+              <Button variant="gold" size="xl">
                 <Users />
                 Become a Volunteer
               </Button>
             </Link>
             <Link to="/about">
-              <Button variant="ghost" size="xl">
+              <Button variant="gold" size="xl">
                 <Calendar />
                 Learn More
               </Button>
@@ -57,8 +57,8 @@ const HeroSection = () => {
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto animate-fade-in-delay-3">
             {[
               { value: "$1,000+", label: "Raised So Far" },
-              { value: "50+", label: "Active Volunteers" },
-              { value: "10+", label: "Events Hosted" },
+              { value: "Growing", label: "Volunteer Community" },
+              { value: "Ongoing", label: "Events & Drives" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="font-display text-3xl md:text-4xl font-bold text-primary mb-1">

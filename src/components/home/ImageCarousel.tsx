@@ -4,29 +4,29 @@ import { Button } from "@/components/ui/button";
 
 const carouselImages = [
   {
-    src: "/placeholder.svg",
-    alt: "Volunteers at community event",
-    caption: "Community Outreach Event",
+    src: "/images/pickleball-fundraiser-group.jpg",
+    alt: "Pickleball fundraiser event with volunteers and participants",
+    caption: "Pickleball Fundraiser Event",
   },
   {
-    src: "/placeholder.svg",
-    alt: "Fundraising event",
-    caption: "Annual Fundraising Gala",
+    src: "/images/community-gathering-group.jpg",
+    alt: "Community gathering with volunteers and supporters",
+    caption: "Community Gathering & Fundraiser",
   },
   {
-    src: "/placeholder.svg",
-    alt: "Care package assembly",
-    caption: "Care Package Assembly Day",
+    src: "/images/volunteers-group-photo.jpg",
+    alt: "Group of volunteers at Cancer Compass event",
+    caption: "Our Dedicated Volunteer Team",
   },
   {
-    src: "/placeholder.svg",
-    alt: "Team photo",
-    caption: "Our Dedicated Team",
+    src: "/images/pickleball-event-action.jpg",
+    alt: "Pickleball tournament in action",
+    caption: "Pickleball Tournament Fundraiser",
   },
   {
-    src: "/placeholder.svg",
-    alt: "Awareness campaign",
-    caption: "Cancer Awareness Campaign",
+    src: "/images/fundraising-table.jpg",
+    alt: "Pickleball fundraiser event with volunteers celebrating and engaging with the community",
+    caption: "Pickleball Fundraiser Celebration",
   },
 ];
 
@@ -79,11 +79,16 @@ const ImageCarousel = () => {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Main Image */}
-          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-muted shadow-xl">
+          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-muted shadow-xl ring-2 ring-primary/10">
             <img
               src={carouselImages[currentIndex].src}
               alt={carouselImages[currentIndex].alt}
-              className="w-full h-full object-cover transition-opacity duration-500"
+              className="w-full h-full object-cover transition-all duration-500 image-fade-in hover:scale-105"
+              loading="lazy"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = "/placeholder.svg";
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -95,7 +100,7 @@ const ImageCarousel = () => {
 
           {/* Navigation Arrows */}
           <Button
-            variant="secondary"
+            variant="gold"
             size="icon"
             className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full shadow-lg opacity-80 hover:opacity-100"
             onClick={goToPrevious}
@@ -103,7 +108,7 @@ const ImageCarousel = () => {
             <ChevronLeft className="w-5 h-5" />
           </Button>
           <Button
-            variant="secondary"
+            variant="gold"
             size="icon"
             className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full shadow-lg opacity-80 hover:opacity-100"
             onClick={goToNext}

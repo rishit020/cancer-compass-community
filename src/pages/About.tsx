@@ -17,56 +17,56 @@ import {
 const purposes = [
   {
     icon: Heart,
-    text: "Raise money for patients and treatment-support foundations",
+    text: "Raise money to support cancer patients and local foundations that provide treatment assistance and family support",
   },
   {
     icon: Lightbulb,
-    text: "Educate the community about cancer and how to help",
+    text: "Educate our community about cancer and ways to help those fighting it",
   },
   {
     icon: Users,
-    text: "Provide meaningful student volunteer opportunities",
+    text: "Give students meaningful volunteer opportunities to make a positive impact",
   },
   {
     icon: Calendar,
-    text: "Run fundraisers, drives, and awareness events",
+    text: "Organize fundraisers, drives, and awareness events throughout the year",
   },
   {
     icon: Globe,
-    text: "Build an inclusive support network for affected families",
+    text: "Build a supportive environment where anyone can help, donate, or get involved",
   },
 ];
 
 const goals = [
   {
     icon: TrendingUp,
-    title: "Grow Beyond Local",
-    description: "Expand our reach beyond local events to impact more communities across the region.",
+    title: "Expand Beyond Local",
+    description: "Expand beyond small community events and grow into a recognized student-led nonprofit",
   },
   {
     icon: Target,
     title: "Increase Fundraising",
-    description: "Set and achieve higher yearly fundraising totals to provide more support.",
+    description: "Increase our yearly fundraising totals (we've already raised over $1,000 and are continuing to grow)",
   },
   {
     icon: Handshake,
     title: "Build Partnerships",
-    description: "Partner with local and regional cancer support programs for greater impact.",
+    description: "Partner with more local and regional cancer support programs",
   },
   {
     icon: Users,
     title: "Volunteer Opportunities",
-    description: "Create ongoing volunteering opportunities for students and community members.",
+    description: "Create consistent volunteer opportunities for students",
   },
   {
     icon: Megaphone,
     title: "Awareness Campaigns",
-    description: "Launch wider awareness campaigns to educate about cancer prevention and support.",
+    description: "Build awareness campaigns that reach schools, neighborhoods, and youth groups",
   },
   {
     icon: Package,
     title: "Direct Family Support",
-    description: "Directly support families with supplies, care packages, and financial assistance.",
+    description: "Use donations to directly help families in need through supplies, care packages, and financial support",
   },
 ];
 
@@ -103,25 +103,27 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Cancer Compass was founded by three high school students—Rushil R, Vrishab P, and Krish D—who
-                  witnessed firsthand the challenges that families face when navigating a cancer diagnosis.
+                  Cancer Compass is a student-led nonprofit founded by Rushil R, Vrishab P, and Krish D. We started this organization because we believe no family should face cancer alone.
                 </p>
                 <p>
-                  What started as a small initiative to help local families has grown into a dedicated nonprofit
-                  organization, bringing together volunteers, donors, and community members who share our vision.
+                  Our mission is to guide, support, and uplift people affected by cancer by raising funds, spreading awareness, and building a strong volunteer community.
                 </p>
                 <p>
-                  Our name reflects our mission: to be a compass for families, guiding them through the difficult
-                  journey of cancer treatment with support, resources, and hope.
+                  What started as a small initiative to help local families has grown into a dedicated nonprofit organization, bringing together volunteers, donors, and community members who share our vision of ensuring no family faces cancer alone.
                 </p>
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-muted border border-border shadow-lg">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-muted border border-border shadow-lg ring-2 ring-primary/10">
                 <img
-                  src="/placeholder.svg"
-                  alt="Cancer Compass founders"
-                  className="w-full h-full object-cover"
+                  src="/images/founders-group-photo.jpg"
+                  alt="Cancer Compass founders Rushil R, Vrishab P, and Krish D"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  loading="lazy"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "/placeholder.svg";
+                  }}
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
@@ -214,7 +216,7 @@ const About = () => {
               </Button>
             </Link>
             <Link to="/volunteer">
-              <Button variant="gold-outline" size="xl">
+              <Button variant="gold" size="xl">
                 <Users />
                 Become a Volunteer
               </Button>

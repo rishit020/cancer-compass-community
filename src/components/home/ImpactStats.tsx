@@ -7,7 +7,7 @@ const stats = [
     value: 1000,
     suffix: "+",
     prefix: "$",
-    label: "Raised for Cancer Patients",
+    label: "Raised So Far (and growing)",
   },
   {
     icon: Users,
