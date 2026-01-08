@@ -15,47 +15,47 @@
     --popover: 0 0% 8%;
     --popover-foreground: 45 30% 90%;
 
-    --primary: 43 85% 55%;
+    --primary: 45 96% 56%;
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 43 85% 55%;
+    --secondary: 45 96% 56%;
     --secondary-foreground: 0 0% 0%;
 
     --muted: 0 0% 12%;
     --muted-foreground: 45 20% 65%;
 
-    --accent: 43 90% 60%;
+    --accent: 45 96% 62%;
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 43 50% 25%;
+    --border: 45 60% 30%;
     --input: 0 0% 15%;
-    --ring: 43 85% 55%;
+    --ring: 45 96% 56%;
 
     --radius: 0.5rem;
 
-    /* Custom tokens - Royal Gold */
-    --gold: 43 85% 55%;
-    --gold-light: 43 80% 70%;
-    --gold-dark: 43 90% 40%;
+    /* Custom tokens - Metallic Gold */
+    --gold: 45 96% 56%;
+    --gold-light: 45 90% 70%;
+    --gold-dark: 45 98% 42%;
     --cream: 0 0% 8%;
     --cream-dark: 0 0% 4%;
     --black: 0 0% 0%;
     --black-light: 0 0% 12%;
 
     /* Gradients - Premium Black & Gold */
-    --gradient-gold: linear-gradient(135deg, hsl(43, 85%, 55%) 0%, hsl(38, 90%, 45%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45, 96%, 56%) 0%, hsl(42, 98%, 48%) 100%);
     --gradient-hero: linear-gradient(180deg, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 6%) 100%);
     --gradient-section: linear-gradient(180deg, hsl(0, 0%, 4%) 0%, hsl(0, 0%, 8%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0, 0%, 8%) 0%, hsl(0, 0%, 4%) 100%);
 
     /* Shadows - Gold Glow */
     --shadow-soft: 0 4px 20px -2px hsl(0, 0%, 0%, 0.5);
-    --shadow-gold: 0 8px 30px -4px hsl(43, 85%, 55%, 0.25);
+    --shadow-gold: 0 8px 30px -4px hsl(45, 96%, 56%, 0.25);
     --shadow-card: 0 2px 12px -2px hsl(0, 0%, 0%, 0.6);
-    --shadow-gold-glow: 0 0 40px -10px hsl(43, 85%, 55%, 0.4);
+    --shadow-gold-glow: 0 0 40px -10px hsl(45, 96%, 56%, 0.4);
 
     /* Fonts */
     --font-display: 'Playfair Display', serif;
@@ -63,12 +63,12 @@
 
     --sidebar-background: 0 0% 4%;
     --sidebar-foreground: 45 30% 90%;
-    --sidebar-primary: 43 85% 55%;
+    --sidebar-primary: 45 96% 56%;
     --sidebar-primary-foreground: 0 0% 0%;
     --sidebar-accent: 0 0% 10%;
     --sidebar-accent-foreground: 45 30% 90%;
-    --sidebar-border: 43 50% 20%;
-    --sidebar-ring: 43 85% 55%;
+    --sidebar-border: 45 60% 25%;
+    --sidebar-ring: 45 96% 56%;
   }
 
   .dark {
@@ -81,28 +81,28 @@
     --popover: 0 0% 8%;
     --popover-foreground: 45 30% 90%;
 
-    --primary: 43 85% 55%;
+    --primary: 45 96% 56%;
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 43 85% 55%;
+    --secondary: 45 96% 56%;
     --secondary-foreground: 0 0% 0%;
 
     --muted: 0 0% 12%;
     --muted-foreground: 45 20% 65%;
 
-    --accent: 43 90% 60%;
+    --accent: 45 96% 62%;
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 43 50% 25%;
+    --border: 45 60% 30%;
     --input: 0 0% 15%;
-    --ring: 43 85% 55%;
+    --ring: 45 96% 56%;
 
-    --gold: 43 85% 55%;
-    --gold-light: 43 80% 70%;
-    --gold-dark: 43 90% 40%;
+    --gold: 45 96% 56%;
+    --gold-light: 45 90% 70%;
+    --gold-dark: 45 98% 42%;
     --cream: 0 0% 8%;
     --cream-dark: 0 0% 4%;
     --black: 0 0% 0%;
@@ -110,12 +110,12 @@
 
     --sidebar-background: 0 0% 4%;
     --sidebar-foreground: 45 30% 90%;
-    --sidebar-primary: 43 85% 55%;
+    --sidebar-primary: 45 96% 56%;
     --sidebar-primary-foreground: 0 0% 0%;
     --sidebar-accent: 0 0% 10%;
     --sidebar-accent-foreground: 45 30% 90%;
-    --sidebar-border: 43 50% 20%;
-    --sidebar-ring: 43 85% 55%;
+    --sidebar-border: 45 60% 25%;
+    --sidebar-ring: 45 96% 56%;
   }
 }
 
@@ -142,7 +142,7 @@
 
   .btn-primary:hover {
     @apply scale-[1.02];
-    box-shadow: 0 12px 40px -6px hsl(43, 85%, 55%, 0.45);
+    box-shadow: 0 12px 40px -6px hsl(45, 96%, 56%, 0.45);
   }
 
   .btn-secondary {
@@ -190,11 +190,11 @@
   }
 
   .gold-border {
-    border: 1px solid hsl(43, 85%, 55%, 0.3);
+    border: 1px solid hsl(45, 96%, 56%, 0.3);
   }
 
   .gold-border-strong {
-    border: 2px solid hsl(43, 85%, 55%, 0.5);
+    border: 2px solid hsl(45, 96%, 56%, 0.5);
   }
 }
 
@@ -273,5 +273,18 @@
   img {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+  }
+
+  .laser-border-animation {
+    animation: laser-trace 3s linear infinite;
+  }
+
+  @keyframes laser-trace {
+    0% {
+      stroke-dashoffset: 396.4;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
   }
 }

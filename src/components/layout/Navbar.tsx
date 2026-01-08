@@ -23,8 +23,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-              <Heart className="w-5 h-5 text-primary-foreground" />
+            <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center transition-transform duration-300 group-hover:scale-110 overflow-hidden">
+              <img 
+                src="/images/icon.png" 
+                alt="Cancer Compass Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="font-display text-xl md:text-2xl font-semibold text-foreground">
               Cancer<span className="text-primary">Compass</span>

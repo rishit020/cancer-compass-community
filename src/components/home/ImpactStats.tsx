@@ -112,7 +112,7 @@ const ImpactStats = () => {
               className="relative group"
             >
               {/* Card with premium styling */}
-              <div className="relative p-8 rounded-2xl border border-primary/20 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-[0_0_30px_-5px_hsl(43,85%,55%,0.2)]">
+              <div className="relative p-8 rounded-2xl border border-primary/20 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-[0_0_30px_-5px_hsl(45,96%,56%,0.2)]">
                 {/* Icon container - always visible */}
                 <div className="w-14 h-14 mx-auto mb-6 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
                   <stat.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />

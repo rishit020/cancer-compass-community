@@ -77,15 +77,17 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-3">
               {[
-                { icon: Instagram, label: "Instagram" },
+                { icon: Instagram, label: "Instagram", url: "https://www.instagram.com/cancer_compass1/" },
                 { icon: Facebook, label: "Facebook" },
                 { icon: Twitter, label: "Twitter" },
                 { icon: Linkedin, label: "LinkedIn" },
               ].map((social) => (
                 <a
                   key={social.label}
-                  href="#"
+                  href={social.url || "#"}
                   aria-label={social.label}
+                  target={social.url ? "_blank" : undefined}
+                  rel={social.url ? "noopener noreferrer" : undefined}
                   className="w-9 h-9 rounded-full bg-secondary-foreground/10 flex items-center justify-center text-secondary-foreground/70 hover:bg-primary hover:text-primary-foreground transition-all duration-200 group"
                 >
                   <social.icon className="w-4 h-4 group-hover:text-primary-foreground transition-colors" />
@@ -102,7 +104,7 @@ const Footer = () => {
               © {currentYear} Cancer Compass. All rights reserved.
             </p>
             <p className="text-secondary-foreground/60 text-sm flex items-center gap-1">
-              Made with <Heart className="w-4 h-4 text-primary fill-primary" /> by students, for the community
+              Made with <Heart className="w-4 h-4 text-black stroke-black fill-black mx-1" /> by students, for the community
             </p>
           </div>
         </div>
